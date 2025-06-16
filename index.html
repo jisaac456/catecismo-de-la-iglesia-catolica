@@ -6,45 +6,76 @@
     <title>Catecismo de la Iglesia Católica</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.unsplash.com/photo-1535909339361-7a2c0d3f0b9b?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            color: white;
             text-align: center;
         }
         .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+            animation: rotateIn 1s ease-in-out;
         }
         h1 {
-            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 36px;
         }
         p {
-            margin: 20px 0;
-            color: #34495e;
+            margin-bottom: 30px;
+            font-size: 18px;
         }
-        a {
-            background-color: #3498db;
-            color: white;
-            padding: 15px 25px;
+        .buttons a {
+            background-color: #ff5f6d;
+            padding: 15px 30px;
+            border-radius: 50px;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
         }
-        a:hover {
-            background-color: #2980b9;
+        .buttons a:hover {
+            background-color: #ff3c4a;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes rotateIn {
+            from { transform: rotate(-180deg); opacity: 0; }
+            to { transform: rotate(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Cross_red.svg/768px-Cross_red.svg.png" alt="Logo" class="logo">
         <h1>Catecismo de la Iglesia Católica</h1>
-        <p>Bienvenido. Haz clic en el botón para ver o descargar el Catecismo completo.</p>
-        <a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" target="_blank">Ver PDF</a>
+        <p>Bienvenido. Aquí puedes ver, descargar o contactarnos para más información.</p>
+        <div class="buttons">
+            <a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" target="_blank">Ver Online</a>
+            <a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" download>Descargar PDF</a>
+            <a href="mailto:tucorreo@example.com" target="_blank">Contacto</a>
+        </div>
     </div>
 </body>
 </html>
+          
