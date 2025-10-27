@@ -11,24 +11,27 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            background: url('https://images.unsplash.com/photo-1535909339361-7a2c0d3f0b9b?auto=format&fit=crop&w=1950&q=80') 
+                        no-repeat center center fixed;
+            background-size: cover;
             color: white;
             text-align: center;
         }
-        header {
+        header, section {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            backdrop-filter: blur(6px);
+            background-color: rgba(0, 0, 0, 0.6);
         }
         .container {
             background-color: rgba(255, 255, 255, 0.1);
             padding: 50px;
             border-radius: 20px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
             animation: fadeIn 1s ease-in-out;
         }
         h1 {
@@ -55,12 +58,6 @@
             background-color: #ff3c4a;
             transform: scale(1.05);
         }
-        section {
-            padding: 80px 20px;
-            min-height: 100vh;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
         h2 {
             font-size: 32px;
             margin-bottom: 20px;
@@ -84,7 +81,7 @@
             background: #2980b9;
         }
         footer {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             font-size: 14px;
         }
@@ -97,11 +94,11 @@
 <body>
 
     <!-- 🏠 INICIO -->
-    <header>
+    <header id="inicio">
         <div class="container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Cross_red.svg/768px-Cross_red.svg.png" 
-     alt="Logo" 
-     style="width:100px; margin-bottom:20px;">
+                 alt="Logo" 
+                 style="width:100px; margin-bottom:20px;">
             <h1>Catecismo de la Iglesia Católica</h1>
             <p>Bienvenido. Selecciona una opción del menú.</p>
             <a href="#libros" class="btn">📚 Libros</a>
@@ -112,32 +109,38 @@
 
     <!-- 📚 SECCIÓN LIBROS -->
     <section id="libros">
-        <h2>📚 Libros Disponibles</h2>
-        <p>Explora los libros del Catecismo y otros materiales disponibles.</p>
-        <ul>
-            <li><a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" target="_blank">Catecismo de la Iglesia Católica</a></li>
-            <li><a href="#">Próximamente más libros...</a></li>
-        </ul>
-        <a href="#top" class="btn">⬆️ Volver al Inicio</a>
+        <div class="container">
+            <h2>📚 Libros Disponibles</h2>
+            <p>Explora los libros del Catecismo y otros materiales disponibles.</p>
+            <ul>
+                <li><a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" target="_blank">Catecismo de la Iglesia Católica</a></li>
+                <li><a href="#">Próximamente más libros...</a></li>
+            </ul>
+            <a href="#inicio" class="btn">⬆️ Volver al Inicio</a>
+        </div>
     </section>
 
     <!-- ⬇️ SECCIÓN DESCARGAR -->
     <section id="descargar">
-        <h2>⬇️ Descargar Libros</h2>
-        <p>Selecciona un libro para descargarlo en formato PDF.</p>
-        <ul>
-            <li><a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" download>Descargar Catecismo</a></li>
-        </ul>
-        <a href="#top" class="btn">⬆️ Volver al Inicio</a>
+        <div class="container">
+            <h2>⬇️ Descargar Libros</h2>
+            <p>Selecciona un libro para descargarlo en formato PDF.</p>
+            <ul>
+                <li><a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" download>Descargar Catecismo</a></li>
+            </ul>
+            <a href="#inicio" class="btn">⬆️ Volver al Inicio</a>
+        </div>
     </section>
 
     <!-- 📞 SECCIÓN CONTACTO -->
     <section id="contacto">
-        <h2>📞 Contacto</h2>
-        <p>Puedes comunicarte con nosotros a través de:</p>
-        <p><b>Correo:</b> <a href="mailto:tucorreo@example.com" style="color:#fff; text-decoration:underline;">tucorreo@example.com</a></p>
-        <p><b>WhatsApp:</b> <a href="https://wa.me/503XXXXXXXX" style="color:#fff; text-decoration:underline;">+503 XXXXXXXX</a></p>
-        <a href="#top" class="btn">⬆️ Volver al Inicio</a>
+        <div class="container">
+            <h2>📞 Contacto</h2>
+            <p>Puedes comunicarte con nosotros a través de:</p>
+            <p><b>Correo:</b> <a href="mailto:tucorreo@example.com" style="color:#fff; text-decoration:underline;">tucorreo@example.com</a></p>
+            <p><b>WhatsApp:</b> <a href="https://wa.me/503XXXXXXXX" style="color:#fff; text-decoration:underline;">+503 XXXXXXXX</a></p>
+            <a href="#inicio" class="btn">⬆️ Volver al Inicio</a>
+        </div>
     </section>
 
     <footer>
