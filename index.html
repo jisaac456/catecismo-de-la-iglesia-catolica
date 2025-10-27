@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catecismo de la Iglesia Católica</title>
     <style>
+        * {
+            scroll-behavior: smooth;
+        }
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://images.unsplash.com/photo-1535909339361-7a2c0d3f0b9b?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
             color: white;
             text-align: center;
         }
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
         .container {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
             animation: fadeIn 1s ease-in-out;
-        }
-        .logo {
-            width: 100px;
-            margin-bottom: 20px;
-            animation: rotateIn 1s ease-in-out;
         }
         h1 {
             margin-bottom: 20px;
@@ -39,7 +39,7 @@
             margin-bottom: 30px;
             font-size: 18px;
         }
-        .buttons a {
+        .btn {
             background-color: #ff5f6d;
             padding: 15px 30px;
             border-radius: 50px;
@@ -47,35 +47,99 @@
             color: white;
             font-weight: bold;
             font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
             margin: 10px;
             display: inline-block;
-            transition: background-color 0.3s, transform 0.3s;
         }
-        .buttons a:hover {
+        .btn:hover {
             background-color: #ff3c4a;
             transform: scale(1.05);
+        }
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            color: #fff;
+            background: #3498db;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        ul li a:hover {
+            background: #2980b9;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            font-size: 14px;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes rotateIn {
-            from { transform: rotate(-180deg); opacity: 0; }
-            to { transform: rotate(0); opacity: 1; }
-        }
     </style>
 </head>
-<body>">
-     <div class="container">
-        <img src="https://bing.com/th/id/BCO.e3b8b36d-05e1-43d8-ae53-0884dee311a9.png" alt="Logo" class="logo">
-        <h1>Catecismo de la Iglesia Católica</h1>
-        <p>Bienvenido. Aquí puedes ver, descargar o contactarnos para más información.</p>
-        <div class="buttons">
-            <a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" target="_blank">Ver Online</a>
-            <a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" download>Descargar PDF</a>
-            <a href="mailto:tucorreo@example.com" target="_blank">Contacto</a>
+<body>
+
+    <!-- 🏠 INICIO -->
+    <header>
+        <div class="container">
+            <h1>Catecismo de la Iglesia Católica</h1>
+            <p>Bienvenido. Selecciona una opción del menú.</p>
+            <a href="#libros" class="btn">📚 Libros</a>
+            <a href="#descargar" class="btn">⬇️ Descargar Libros</a>
+            <a href="#contacto" class="btn">📞 Contacto</a>
         </div>
-    </div>
+    </header>
+
+    <!-- 📚 SECCIÓN LIBROS -->
+    <section id="libros">
+        <h2>📚 Libros Disponibles</h2>
+        <p>Explora los libros del Catecismo y otros materiales disponibles.</p>
+        <ul>
+            <li><a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" target="_blank">Catecismo de la Iglesia Católica</a></li>
+            <li><a href="#">Próximamente más libros...</a></li>
+        </ul>
+        <a href="#top" class="btn">⬆️ Volver al Inicio</a>
+    </section>
+
+    <!-- ⬇️ SECCIÓN DESCARGAR -->
+    <section id="descargar">
+        <h2>⬇️ Descargar Libros</h2>
+        <p>Selecciona un libro para descargarlo en formato PDF.</p>
+        <ul>
+            <li><a href="Catecismo%20Iglesia%20Cat%C3%B3lica.pdf" download>Descargar Catecismo</a></li>
+        </ul>
+        <a href="#top" class="btn">⬆️ Volver al Inicio</a>
+    </section>
+
+    <!-- 📞 SECCIÓN CONTACTO -->
+    <section id="contacto">
+        <h2>📞 Contacto</h2>
+        <p>Puedes comunicarte con nosotros a través de:</p>
+        <p><b>Correo:</b> <a href="mailto:tucorreo@example.com" style="color:#fff; text-decoration:underline;">tucorreo@example.com</a></p>
+        <p><b>WhatsApp:</b> <a href="https://wa.me/503XXXXXXXX" style="color:#fff; text-decoration:underline;">+503 XXXXXXXX</a></p>
+        <a href="#top" class="btn">⬆️ Volver al Inicio</a>
+    </section>
+
+    <footer>
+        © 2025 Catecismo de la Iglesia Católica — Todos los derechos reservados
+    </footer>
+
 </body>
 </html>
-          
